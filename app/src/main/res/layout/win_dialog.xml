@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:padding="30dp"
+    android:background="@drawable/bg_dialog">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="30dp"
+        android:background="@drawable/bg_coins_front">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="You've won!"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/newHighScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/score"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:backgroundTint="@color/lightBlue"
+            android:background="@drawable/radius_view"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="11dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/winDialogMoves"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Motion : 12"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/winDialogTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time : 7:12"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp">
+
+            <ImageView
+                android:backgroundTint="@color/lightBlue"
+                android:background="@drawable/radius_view"
+                android:id="@+id/winDialogHome"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/home_main"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/winDialogRestart"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/restart_blue"
+                android:layout_weight="1"
+                android:background="@drawable/radius_view"
+                android:backgroundTint="@color/lightBlue"
+
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
