@@ -62,8 +62,8 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn1"
                 style="@style/customButton"
-                android:layout_width="108dp"
-                android:layout_height="118dp"
+                android:layout_width="100dp"
+                android:layout_height="110dp"
                 android:layout_margin="9dp"
                 android:background="@drawable/bg_btn"
                 android:onClick="btnClick"
@@ -74,8 +74,8 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn2"
                 style="@style/customButton"
-                android:layout_width="108dp"
-                android:layout_height="118dp"
+                android:layout_width="100dp"
+                android:layout_height="110dp"
                 android:layout_margin="9dp"
                 android:background="@drawable/bg_btn"
                 android:onClick="btnClick"
@@ -86,8 +86,8 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn3"
                 style="@style/customButton"
-                android:layout_width="108dp"
-                android:layout_height="118dp"
+                android:layout_width="100dp"
+                android:layout_height="110dp"
                 android:layout_margin="9dp"
                 android:background="@drawable/bg_btn"
                 android:onClick="btnClick"
@@ -98,8 +98,8 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn4"
                 style="@style/customButton"
-                android:layout_width="108dp"
-                android:layout_height="118dp"
+                android:layout_width="100dp"
+                android:layout_height="110dp"
                 android:layout_margin="9dp"
                 android:onClick="btnClick"
                 android:tag="btn4"
@@ -110,8 +110,8 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn5"
                 style="@style/customButton"
-                android:layout_width="108dp"
-                android:layout_height="118dp"
+                android:layout_width="100dp"
+                android:layout_height="110dp"
                 android:layout_margin="9dp"
                 android:background="@drawable/bg_btn"
                 android:onClick="btnClick"
@@ -122,8 +122,8 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn6"
                 style="@style/customButton"
-                android:layout_width="108dp"
-                android:layout_height="118dp"
+                android:layout_width="100dp"
+                android:layout_height="110dp"
                 android:layout_margin="9dp"
                 android:background="@drawable/bg_btn"
                 android:onClick="btnClick"
@@ -134,8 +134,8 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn7"
                 style="@style/customButton"
-                android:layout_width="108dp"
-                android:layout_height="118dp"
+                android:layout_width="100dp"
+                android:layout_height="110dp"
                 android:layout_margin="9dp"
                 android:background="@drawable/bg_btn"
                 android:onClick="btnClick"
@@ -146,8 +146,8 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn8"
                 style="@style/customButton"
-                android:layout_width="108dp"
-                android:layout_height="118dp"
+                android:layout_width="100dp"
+                android:layout_height="110dp"
                 android:layout_margin="9dp"
                 android:background="@drawable/bg_btn"
                 android:onClick="btnClick"
@@ -158,8 +158,8 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn9"
                 style="@style/customButton"
-                android:layout_width="108dp"
-                android:layout_height="118dp"
+                android:layout_width="100dp"
+                android:layout_height="110dp"
                 android:layout_margin="9dp"
                 android:background="@drawable/bg_btn"
                 android:onClick="btnClick"
@@ -170,8 +170,8 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn10"
                 style="@style/customButton"
-                android:layout_width="108dp"
-                android:layout_height="118dp"
+                android:layout_width="100dp"
+                android:layout_height="110dp"
                 android:layout_margin="9dp"
                 android:background="@drawable/bg_btn"
                 android:onClick="btnClick"
@@ -182,8 +182,8 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn11"
                 style="@style/customButton"
-                android:layout_width="108dp"
-                android:layout_height="118dp"
+                android:layout_width="100dp"
+                android:layout_height="110dp"
                 android:layout_margin="9dp"
                 android:background="@drawable/bg_btn"
                 android:onClick="btnClick"
@@ -194,8 +194,8 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn12"
                 style="@style/customButton"
-                android:layout_width="108dp"
-                android:layout_height="118dp"
+                android:layout_width="100dp"
+                android:layout_height="110dp"
                 android:layout_margin="9dp"
                 android:background="@drawable/bg_btn"
                 android:onClick="btnClick"
@@ -230,11 +230,12 @@
                 android:background="@drawable/radius_view"
                 android:backgroundTint="#fff"
                 android:paddingLeft="4dp"
-                android:paddingRight="4dp"
-                android:text="Motion : 0"
                 android:paddingTop="6dp"
+                android:paddingRight="4dp"
                 android:paddingBottom="6dp"
-                android:textColor="#ECC757" />
+                android:text="Motion : 0"
+                android:textColor="#ECC757"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/highestTime"
@@ -245,11 +246,12 @@
                 android:background="@drawable/radius_view"
                 android:backgroundTint="#fff"
                 android:paddingLeft="4dp"
-                android:paddingRight="4dp"
-                android:text="Time : 0:00"
                 android:paddingTop="6dp"
+                android:paddingRight="4dp"
                 android:paddingBottom="6dp"
-                android:textColor="#ECC757" />
+                android:text="Time : 0:00"
+                android:textColor="#ECC757"
+                android:textSize="20sp" />
 
 
         </LinearLayout>

@@ -2,4 +2,6 @@
     <string name="app_name">The Diamond Age</string>
     <string name="question_mark">\?</string>
     <string name="score">\u2B50 <u>New HighScore</u> \u2B50</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sound Control"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"/>
+
+    <SeekBar
+        android:id="@+id/soundSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="100"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/soundValueTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Volume: 100"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"/>
+
+</LinearLayout>

@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.Handler
 import android.view.View
@@ -14,8 +15,13 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import com.app.thediamondage.R
 import com.app.thediamondage.databinding.ActivityGameViewBinding
+import com.app.thediamondage.model.Record
+import com.google.gson.Gson
 
 class GameView : AppCompatActivity() {
+    lateinit var recordsList: MutableList<Record>
+    private lateinit var mediaPlayer: MediaPlayer
+
     private lateinit var buttons: List<AppCompatButton>
     lateinit var binding: ActivityGameViewBinding
     var motion: TextView? = null
@@ -47,6 +53,12 @@ class GameView : AppCompatActivity() {
         initializeViews()
         initializeIntents()
         setScore()
+        recordsList = mutableListOf()
+        mediaPlayer = MediaPlayer.create(this, R.raw.gamevolume)
+        mediaPlayer.start()
+        mediaPlayer.setOnCompletionListener {
+            mediaPlayer.start()
+        }
         val images = ArrayList(
             mutableListOf(
                 "card1", "card1", "card2",
@@ -76,7 +88,9 @@ class GameView : AppCompatActivity() {
 
     override fun onBackPressed() {
         super.onBackPressed()
-        openPauseDialog()
+        finish()
+        startActivity(Intent(this, MainActivity::class.java))
+//        openPauseDialog()
     }
     private fun initializeIntents() {
         IMain = Intent(this@GameView, MainActivity::class.java)
@@ -203,8 +217,10 @@ class GameView : AppCompatActivity() {
         val winDialogHome = winDialog.findViewById<ImageView>(R.id.winDialogHome)
         val newHighScore = winDialog.findViewById<TextView>(R.id.newHighScore)
         if (!isHighScoreBroke) {
+
             newHighScore.visibility = View.INVISIBLE
         } else {
+
             newHighScore.visibility = View.VISIBLE
         }
         winDialogMoves.text = motion!!.text
@@ -217,6 +233,7 @@ class GameView : AppCompatActivity() {
         winDialogHome.setOnClickListener {
             startActivity(IMain)
             restartGame()
+
         }
         winDialog.show()
     }
@@ -279,8 +296,33 @@ class GameView : AppCompatActivity() {
             editor.putInt("motion", motionCount)
             editor.putInt("time", sec)
             editor.apply()
+
+            // Сохранение результатов в SharedPreferences в виде строки
+            val recordString = "$motionCount, $sec"
+            val oldRecords = preferences.getString("recordsList", "")
+            val newRecords = if (oldRecords.isNullOrEmpty()) {
+                recordString
+            } else {
+                "$oldRecords;$recordString"
+            }
+            editor.putString("recordsList", newRecords)
+            editor.apply()
+
             return true
         }
         return false
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        mediaPlayer.release()
+    }
+    override fun onPause() {
+        super.onPause()
+        mediaPlayer.pause()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        mediaPlayer.start()
     }
 }
